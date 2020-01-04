@@ -1,1 +1,1 @@
-Bootstarp based Template
+Bootstrap based Template
