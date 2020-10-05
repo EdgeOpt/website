@@ -544,7 +544,7 @@
 
 
     <!-- subscribe_newsletter_Start -->
-     <!-- <div class="subscribe_newsletter">
+     <div class="subscribe_newsletter">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6"><div class="newsletter_text"><h3>New Course!</h3><p>Register for the Course</p></div></div>
@@ -555,13 +555,21 @@
                                 <span>Register For the Course</span>
                                 </i>
                             </a>
-
                         </div>
                     </div>
                 </div>
             </div>
-     </div> -->
+     </div>
     <!-- subscribe_newsletter_end --->
+
+
+    <form action="contact_process.php" method="post">
+            First Name: <input type="text" name="first_name"><br>
+            Last Name: <input type="text" name="last_name"><br>
+            Email: <input type="text" name="email"><br>
+            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+            <input type="submit" name="submit" value="Submit">
+    </form>
 
 
      <!-- form itself end-->
@@ -574,17 +582,31 @@
                     </a> -->
                 </div>
                 <h3>Course Registration</h3>
-                <form action="#">
+                <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
-                            <input type="email" placeholder="Enter email">
+                            <div class="form-group">
+                            <input name="email" id="email" type="email" placeholder="Enter email">
+                            </div>
                         </div>
                         <div class="col-xl-12 col-md-12">
-                            <input type="Reference" placeholder="Enter your name">
+                            <div class="form-group">
+                            <input name="name" id="name" type="Reference" placeholder="Enter your name">
+                            </div>
                         </div>
+
+                        <div class="col-xl-12 col-md-12">
+                                <div class="form-group">
+                                <input name="course_name" id="course_name" type="Reference" placeholder="Enter the courser name">
+                                </div>
+                        </div>
+
                         <div class="col-xl-12">
+                                <div class="form-group mt-3">
                             <button type="submit" class="boxed_btn_orange">Register</button>
+                             </div>
                         </div>
+
                     </div>
                 </form>
                 <p class="doen_have_acc">Payment details will be sent to your Email. <br>
